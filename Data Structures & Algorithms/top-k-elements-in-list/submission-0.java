@@ -1,0 +1,20 @@
+class Solution {
+    public int[] topKFrequent(int[] nums, int k) {
+        HashMap<Integer, Integer> map = new Hashmap<>();
+        for ( int n : nums ) {
+            if (map.isEmpty()) {
+                map.put(n, 1);
+            } else {
+                map.put(n, map.get(key) + 1);
+            }
+        }
+        List<Map.Entry<Inter, Integer>> list = new ArrayList<>(map.entrySet());
+        list.sort(Map.Entry.comparingByKey()).reversed();
+
+        int[] res = new int[k];
+        for ( int i; i < k; i++) {
+            res[i] = list.get(i);
+        }
+
+    }
+}
